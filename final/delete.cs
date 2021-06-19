@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.IO;
+
 
 namespace final
 {
@@ -82,17 +84,30 @@ namespace final
                     {
                         Program.emo = read.GetString("emo").ToString();
                         Program.note = read.GetString("note").ToString();
+                        Program.picturetoclass = (byte[])(read["image"]);
 
                         readdairy item = new readdairy()
                         {
                             emo = Program.emo,
-                            note = Program.note
+                            note = Program.note,
+                            picturedairy = Program.picturetoclass
                         };
 
                         bookdairy.Add(item);
                     }
                     foreach (var i in bookdairy)
                     {
+                        try
+                        {
+                            MemoryStream mstream = new MemoryStream(i.picturedairy);
+                            Image img = Image.FromStream(mstream);
+                            delpicturebox.Image = img;
+                        }
+                        catch (Exception)
+                        {
+                            delpicturebox.Image = null;
+                        }
+
                         noteshow = noteshow + "\n" + i.note;
                     }
                     notetextbox.Text = noteshow;

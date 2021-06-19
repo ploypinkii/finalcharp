@@ -29,17 +29,12 @@ namespace final
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dairyform));
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.happybtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.excitedbtn = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.sadbtn = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.angrybtn = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.boredbtn = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.calmbtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -49,6 +44,19 @@ namespace final
             this.label10 = new System.Windows.Forms.Label();
             this.notetextbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.calmbtn = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.boredbtn = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.angrybtn = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.sadbtn = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.excitedbtn = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.happybtn = new Guna.UI2.WinForms.Guna2CircleButton();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2DateTimePicker1
@@ -63,6 +71,7 @@ namespace final
             this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.guna2DateTimePicker1.HoverState.Parent = this.guna2DateTimePicker1;
             this.guna2DateTimePicker1.Location = new System.Drawing.Point(252, 379);
+            this.guna2DateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
@@ -77,9 +86,9 @@ namespace final
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("LEMON MILK", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.label1.Location = new System.Drawing.Point(242, 16);
+            this.label1.Location = new System.Drawing.Point(243, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 29);
+            this.label1.Size = new System.Drawing.Size(147, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "ADD NEW DAIRY!";
             // 
@@ -88,162 +97,30 @@ namespace final
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("LEMON MILK", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.label2.Location = new System.Drawing.Point(46, 382);
+            this.label2.Location = new System.Drawing.Point(45, 382);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 24);
+            this.label2.Size = new System.Drawing.Size(140, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Choose this day!";
-            // 
-            // happybtn
-            // 
-            this.happybtn.Animated = true;
-            this.happybtn.BackColor = System.Drawing.Color.Transparent;
-            this.happybtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("happybtn.BackgroundImage")));
-            this.happybtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.happybtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.happybtn.CheckedState.Parent = this.happybtn;
-            this.happybtn.CustomImages.Parent = this.happybtn;
-            this.happybtn.FillColor = System.Drawing.Color.Transparent;
-            this.happybtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.happybtn.ForeColor = System.Drawing.Color.White;
-            this.happybtn.HoverState.Parent = this.happybtn;
-            this.happybtn.Location = new System.Drawing.Point(49, 88);
-            this.happybtn.Name = "happybtn";
-            this.happybtn.PressedColor = System.Drawing.Color.White;
-            this.happybtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.happybtn.ShadowDecoration.Parent = this.happybtn;
-            this.happybtn.Size = new System.Drawing.Size(57, 54);
-            this.happybtn.TabIndex = 4;
-            this.happybtn.Click += new System.EventHandler(this.happybtn_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("LEMON MILK", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.label3.Location = new System.Drawing.Point(45, 56);
+            this.label3.Location = new System.Drawing.Point(45, 57);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(222, 24);
+            this.label3.Size = new System.Drawing.Size(180, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Choose your feeling!";
-            // 
-            // excitedbtn
-            // 
-            this.excitedbtn.Animated = true;
-            this.excitedbtn.BackColor = System.Drawing.Color.Transparent;
-            this.excitedbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("excitedbtn.BackgroundImage")));
-            this.excitedbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.excitedbtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.excitedbtn.CheckedState.Parent = this.excitedbtn;
-            this.excitedbtn.CustomImages.Parent = this.excitedbtn;
-            this.excitedbtn.FillColor = System.Drawing.Color.Transparent;
-            this.excitedbtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.excitedbtn.ForeColor = System.Drawing.Color.White;
-            this.excitedbtn.HoverState.Parent = this.excitedbtn;
-            this.excitedbtn.Location = new System.Drawing.Point(151, 88);
-            this.excitedbtn.Name = "excitedbtn";
-            this.excitedbtn.PressedColor = System.Drawing.Color.White;
-            this.excitedbtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.excitedbtn.ShadowDecoration.Parent = this.excitedbtn;
-            this.excitedbtn.Size = new System.Drawing.Size(57, 54);
-            this.excitedbtn.TabIndex = 6;
-            this.excitedbtn.Click += new System.EventHandler(this.excitedbtn_Click);
-            // 
-            // sadbtn
-            // 
-            this.sadbtn.Animated = true;
-            this.sadbtn.BackColor = System.Drawing.Color.Transparent;
-            this.sadbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sadbtn.BackgroundImage")));
-            this.sadbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.sadbtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.sadbtn.CheckedState.Parent = this.sadbtn;
-            this.sadbtn.CustomImages.Parent = this.sadbtn;
-            this.sadbtn.FillColor = System.Drawing.Color.Transparent;
-            this.sadbtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.sadbtn.ForeColor = System.Drawing.Color.White;
-            this.sadbtn.HoverState.Parent = this.sadbtn;
-            this.sadbtn.Location = new System.Drawing.Point(252, 88);
-            this.sadbtn.Name = "sadbtn";
-            this.sadbtn.PressedColor = System.Drawing.Color.White;
-            this.sadbtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.sadbtn.ShadowDecoration.Parent = this.sadbtn;
-            this.sadbtn.Size = new System.Drawing.Size(57, 54);
-            this.sadbtn.TabIndex = 7;
-            this.sadbtn.Click += new System.EventHandler(this.sadbtn_Click);
-            // 
-            // angrybtn
-            // 
-            this.angrybtn.Animated = true;
-            this.angrybtn.BackColor = System.Drawing.Color.Transparent;
-            this.angrybtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("angrybtn.BackgroundImage")));
-            this.angrybtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.angrybtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.angrybtn.CheckedState.Parent = this.angrybtn;
-            this.angrybtn.CustomImages.Parent = this.angrybtn;
-            this.angrybtn.FillColor = System.Drawing.Color.Transparent;
-            this.angrybtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.angrybtn.ForeColor = System.Drawing.Color.White;
-            this.angrybtn.HoverState.Parent = this.angrybtn;
-            this.angrybtn.Location = new System.Drawing.Point(353, 88);
-            this.angrybtn.Name = "angrybtn";
-            this.angrybtn.PressedColor = System.Drawing.Color.White;
-            this.angrybtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.angrybtn.ShadowDecoration.Parent = this.angrybtn;
-            this.angrybtn.Size = new System.Drawing.Size(57, 54);
-            this.angrybtn.TabIndex = 8;
-            this.angrybtn.Click += new System.EventHandler(this.angrybtn_Click);
-            // 
-            // boredbtn
-            // 
-            this.boredbtn.Animated = true;
-            this.boredbtn.BackColor = System.Drawing.Color.Transparent;
-            this.boredbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("boredbtn.BackgroundImage")));
-            this.boredbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.boredbtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.boredbtn.CheckedState.Parent = this.boredbtn;
-            this.boredbtn.CustomImages.Parent = this.boredbtn;
-            this.boredbtn.FillColor = System.Drawing.Color.Transparent;
-            this.boredbtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.boredbtn.ForeColor = System.Drawing.Color.White;
-            this.boredbtn.HoverState.Parent = this.boredbtn;
-            this.boredbtn.Location = new System.Drawing.Point(458, 88);
-            this.boredbtn.Name = "boredbtn";
-            this.boredbtn.PressedColor = System.Drawing.Color.White;
-            this.boredbtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.boredbtn.ShadowDecoration.Parent = this.boredbtn;
-            this.boredbtn.Size = new System.Drawing.Size(57, 54);
-            this.boredbtn.TabIndex = 9;
-            this.boredbtn.Click += new System.EventHandler(this.boredbtn_Click);
-            // 
-            // calmbtn
-            // 
-            this.calmbtn.Animated = true;
-            this.calmbtn.BackColor = System.Drawing.Color.Transparent;
-            this.calmbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("calmbtn.BackgroundImage")));
-            this.calmbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.calmbtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.calmbtn.CheckedState.Parent = this.calmbtn;
-            this.calmbtn.CustomImages.Parent = this.calmbtn;
-            this.calmbtn.FillColor = System.Drawing.Color.Transparent;
-            this.calmbtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.calmbtn.ForeColor = System.Drawing.Color.White;
-            this.calmbtn.HoverState.Parent = this.calmbtn;
-            this.calmbtn.Location = new System.Drawing.Point(566, 88);
-            this.calmbtn.Name = "calmbtn";
-            this.calmbtn.PressedColor = System.Drawing.Color.White;
-            this.calmbtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.calmbtn.ShadowDecoration.Parent = this.calmbtn;
-            this.calmbtn.Size = new System.Drawing.Size(57, 54);
-            this.calmbtn.TabIndex = 10;
-            this.calmbtn.Click += new System.EventHandler(this.calmbtn_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(52, 147);
+            this.label4.Location = new System.Drawing.Point(52, 146);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 20);
+            this.label4.Size = new System.Drawing.Size(42, 15);
             this.label4.TabIndex = 11;
             this.label4.Text = "Happy";
             // 
@@ -251,9 +128,9 @@ namespace final
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(151, 147);
+            this.label5.Location = new System.Drawing.Point(151, 146);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 20);
+            this.label5.Size = new System.Drawing.Size(45, 15);
             this.label5.TabIndex = 12;
             this.label5.Text = "Excited";
             // 
@@ -261,9 +138,9 @@ namespace final
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(262, 147);
+            this.label6.Location = new System.Drawing.Point(261, 146);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 20);
+            this.label6.Size = new System.Drawing.Size(27, 15);
             this.label6.TabIndex = 13;
             this.label6.Text = "Sad";
             // 
@@ -271,9 +148,9 @@ namespace final
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(358, 147);
+            this.label7.Location = new System.Drawing.Point(357, 146);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 20);
+            this.label7.Size = new System.Drawing.Size(39, 15);
             this.label7.TabIndex = 14;
             this.label7.Text = "Angry";
             // 
@@ -281,9 +158,9 @@ namespace final
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(464, 147);
+            this.label8.Location = new System.Drawing.Point(464, 146);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 20);
+            this.label8.Size = new System.Drawing.Size(38, 15);
             this.label8.TabIndex = 15;
             this.label8.Text = "Bored";
             // 
@@ -291,9 +168,9 @@ namespace final
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(573, 147);
+            this.label9.Location = new System.Drawing.Point(573, 146);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 20);
+            this.label9.Size = new System.Drawing.Size(35, 15);
             this.label9.TabIndex = 16;
             this.label9.Text = "Calm";
             // 
@@ -302,9 +179,9 @@ namespace final
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("LEMON MILK", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.label10.Location = new System.Drawing.Point(234, 187);
+            this.label10.Location = new System.Drawing.Point(79, 185);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(200, 24);
+            this.label10.Size = new System.Drawing.Size(163, 20);
             this.label10.TabIndex = 18;
             this.label10.Text = "how was your day ?";
             // 
@@ -323,7 +200,8 @@ namespace final
             this.notetextbox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.notetextbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.notetextbox.HoverState.Parent = this.notetextbox;
-            this.notetextbox.Location = new System.Drawing.Point(49, 218);
+            this.notetextbox.Location = new System.Drawing.Point(51, 214);
+            this.notetextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.notetextbox.Multiline = true;
             this.notetextbox.Name = "notetextbox";
             this.notetextbox.PasswordChar = '\0';
@@ -331,7 +209,7 @@ namespace final
             this.notetextbox.PlaceholderText = "";
             this.notetextbox.SelectedText = "";
             this.notetextbox.ShadowDecoration.Parent = this.notetextbox;
-            this.notetextbox.Size = new System.Drawing.Size(574, 138);
+            this.notetextbox.Size = new System.Drawing.Size(275, 143);
             this.notetextbox.TabIndex = 19;
             // 
             // guna2Button1
@@ -346,6 +224,7 @@ namespace final
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Location = new System.Drawing.Point(512, 379);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(111, 32);
@@ -353,11 +232,197 @@ namespace final
             this.guna2Button1.Text = "add dairy";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
+            // guna2Button2
+            // 
+            this.guna2Button2.Animated = true;
+            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.BorderRadius = 7;
+            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
+            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
+            this.guna2Button2.FillColor = System.Drawing.Color.Pink;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.Parent = this.guna2Button2;
+            this.guna2Button2.Location = new System.Drawing.Point(529, 334);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
+            this.guna2Button2.Size = new System.Drawing.Size(91, 23);
+            this.guna2Button2.TabIndex = 22;
+            this.guna2Button2.Text = "browse";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::final.Properties.Resources.blank;
+            this.pictureBox2.Location = new System.Drawing.Point(443, 245);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(59, 48);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(361, 214);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(258, 113);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
+            // 
+            // calmbtn
+            // 
+            this.calmbtn.Animated = true;
+            this.calmbtn.BackColor = System.Drawing.Color.Transparent;
+            this.calmbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("calmbtn.BackgroundImage")));
+            this.calmbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.calmbtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.calmbtn.CheckedState.Parent = this.calmbtn;
+            this.calmbtn.CustomImages.Parent = this.calmbtn;
+            this.calmbtn.FillColor = System.Drawing.Color.Transparent;
+            this.calmbtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.calmbtn.ForeColor = System.Drawing.Color.White;
+            this.calmbtn.HoverState.Parent = this.calmbtn;
+            this.calmbtn.Location = new System.Drawing.Point(565, 89);
+            this.calmbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.calmbtn.Name = "calmbtn";
+            this.calmbtn.PressedColor = System.Drawing.Color.White;
+            this.calmbtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.calmbtn.ShadowDecoration.Parent = this.calmbtn;
+            this.calmbtn.Size = new System.Drawing.Size(57, 54);
+            this.calmbtn.TabIndex = 10;
+            this.calmbtn.Click += new System.EventHandler(this.calmbtn_Click);
+            // 
+            // boredbtn
+            // 
+            this.boredbtn.Animated = true;
+            this.boredbtn.BackColor = System.Drawing.Color.Transparent;
+            this.boredbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("boredbtn.BackgroundImage")));
+            this.boredbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.boredbtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.boredbtn.CheckedState.Parent = this.boredbtn;
+            this.boredbtn.CustomImages.Parent = this.boredbtn;
+            this.boredbtn.FillColor = System.Drawing.Color.Transparent;
+            this.boredbtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.boredbtn.ForeColor = System.Drawing.Color.White;
+            this.boredbtn.HoverState.Parent = this.boredbtn;
+            this.boredbtn.Location = new System.Drawing.Point(459, 89);
+            this.boredbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.boredbtn.Name = "boredbtn";
+            this.boredbtn.PressedColor = System.Drawing.Color.White;
+            this.boredbtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.boredbtn.ShadowDecoration.Parent = this.boredbtn;
+            this.boredbtn.Size = new System.Drawing.Size(57, 54);
+            this.boredbtn.TabIndex = 9;
+            this.boredbtn.Click += new System.EventHandler(this.boredbtn_Click);
+            // 
+            // angrybtn
+            // 
+            this.angrybtn.Animated = true;
+            this.angrybtn.BackColor = System.Drawing.Color.Transparent;
+            this.angrybtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("angrybtn.BackgroundImage")));
+            this.angrybtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.angrybtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.angrybtn.CheckedState.Parent = this.angrybtn;
+            this.angrybtn.CustomImages.Parent = this.angrybtn;
+            this.angrybtn.FillColor = System.Drawing.Color.Transparent;
+            this.angrybtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.angrybtn.ForeColor = System.Drawing.Color.White;
+            this.angrybtn.HoverState.Parent = this.angrybtn;
+            this.angrybtn.Location = new System.Drawing.Point(353, 89);
+            this.angrybtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.angrybtn.Name = "angrybtn";
+            this.angrybtn.PressedColor = System.Drawing.Color.White;
+            this.angrybtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.angrybtn.ShadowDecoration.Parent = this.angrybtn;
+            this.angrybtn.Size = new System.Drawing.Size(57, 54);
+            this.angrybtn.TabIndex = 8;
+            this.angrybtn.Click += new System.EventHandler(this.angrybtn_Click);
+            // 
+            // sadbtn
+            // 
+            this.sadbtn.Animated = true;
+            this.sadbtn.BackColor = System.Drawing.Color.Transparent;
+            this.sadbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sadbtn.BackgroundImage")));
+            this.sadbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.sadbtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.sadbtn.CheckedState.Parent = this.sadbtn;
+            this.sadbtn.CustomImages.Parent = this.sadbtn;
+            this.sadbtn.FillColor = System.Drawing.Color.Transparent;
+            this.sadbtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.sadbtn.ForeColor = System.Drawing.Color.White;
+            this.sadbtn.HoverState.Parent = this.sadbtn;
+            this.sadbtn.Location = new System.Drawing.Point(252, 89);
+            this.sadbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.sadbtn.Name = "sadbtn";
+            this.sadbtn.PressedColor = System.Drawing.Color.White;
+            this.sadbtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.sadbtn.ShadowDecoration.Parent = this.sadbtn;
+            this.sadbtn.Size = new System.Drawing.Size(57, 54);
+            this.sadbtn.TabIndex = 7;
+            this.sadbtn.Click += new System.EventHandler(this.sadbtn_Click);
+            // 
+            // excitedbtn
+            // 
+            this.excitedbtn.Animated = true;
+            this.excitedbtn.BackColor = System.Drawing.Color.Transparent;
+            this.excitedbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("excitedbtn.BackgroundImage")));
+            this.excitedbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.excitedbtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.excitedbtn.CheckedState.Parent = this.excitedbtn;
+            this.excitedbtn.CustomImages.Parent = this.excitedbtn;
+            this.excitedbtn.FillColor = System.Drawing.Color.Transparent;
+            this.excitedbtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.excitedbtn.ForeColor = System.Drawing.Color.White;
+            this.excitedbtn.HoverState.Parent = this.excitedbtn;
+            this.excitedbtn.Location = new System.Drawing.Point(151, 89);
+            this.excitedbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.excitedbtn.Name = "excitedbtn";
+            this.excitedbtn.PressedColor = System.Drawing.Color.White;
+            this.excitedbtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.excitedbtn.ShadowDecoration.Parent = this.excitedbtn;
+            this.excitedbtn.Size = new System.Drawing.Size(57, 54);
+            this.excitedbtn.TabIndex = 6;
+            this.excitedbtn.Click += new System.EventHandler(this.excitedbtn_Click);
+            // 
+            // happybtn
+            // 
+            this.happybtn.Animated = true;
+            this.happybtn.BackColor = System.Drawing.Color.Transparent;
+            this.happybtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("happybtn.BackgroundImage")));
+            this.happybtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.happybtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.happybtn.CheckedState.Parent = this.happybtn;
+            this.happybtn.CustomImages.Parent = this.happybtn;
+            this.happybtn.FillColor = System.Drawing.Color.Transparent;
+            this.happybtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.happybtn.ForeColor = System.Drawing.Color.White;
+            this.happybtn.HoverState.Parent = this.happybtn;
+            this.happybtn.Location = new System.Drawing.Point(49, 89);
+            this.happybtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.happybtn.Name = "happybtn";
+            this.happybtn.PressedColor = System.Drawing.Color.White;
+            this.happybtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.happybtn.ShadowDecoration.Parent = this.happybtn;
+            this.happybtn.Size = new System.Drawing.Size(57, 54);
+            this.happybtn.TabIndex = 4;
+            this.happybtn.Click += new System.EventHandler(this.happybtn_Click);
+            // 
             // dairyform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
+            this.Controls.Add(this.guna2Button2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.notetextbox);
             this.Controls.Add(this.label10);
@@ -377,9 +442,14 @@ namespace final
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2DateTimePicker1);
+            this.Controls.Add(this.pictureBox2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "dairyform";
             this.Size = new System.Drawing.Size(669, 463);
             this.Load += new System.EventHandler(this.dairyform_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -406,5 +476,9 @@ namespace final
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2TextBox notetextbox;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

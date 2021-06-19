@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.IO;
 
 namespace final
 {
@@ -32,12 +33,15 @@ namespace final
             string mn = datefinal[1];
             string yr = datefinal[2];
 
+
+
             db.openConnection();
             string selectsql = $"SELECT * FROM `dairy` WHERE `user` = \"{Program.username}\" AND `day` = \"{dy}\" AND `month` = \"{mn}\" AND `year` = \"{yr}\"";
             MySqlCommand cmd = new MySqlCommand(selectsql, db.GetConnection());
             db.closeConnection();
             try
             {
+
                 db.openConnection();
                 using (MySqlDataReader read = cmd.ExecuteReader())
 
@@ -46,32 +50,34 @@ namespace final
                     while (read.Read())
                     {
                         Program.emo = read.GetString("emo").ToString();
-                        //Program.day = read.GetString("day").ToString();
-                        //Program.month = read.GetString("month").ToString();
-                        //Program.year = read.GetString("year").ToString();
                         Program.note = read.GetString("note").ToString();
+                        Program.picturetoclass = (byte[])(read["image"]);
 
                         readdairy item = new readdairy()
                         {
                             emo = Program.emo,
-                            //day = Program.day,
-                            //month = Program.month,
-                            //year = Program.year,
-                            note = Program.note
+                            note = Program.note,
+                            picturedairy = Program.picturetoclass
                         };
-                        
                         bookdairy.Add(item);
                     }
                     foreach (var i in bookdairy)
                     {
-                        //noteshow = noteshow + "" + i.emo;
-                        //noteshow = noteshow + "\n" + i.day;
-                        //noteshow = noteshow + "/" + i.month;
-                        //noteshow = noteshow + "/" + i.year;
+                        try
+                        {
+                            MemoryStream mstream = new MemoryStream(i.picturedairy);
+                            Image img = Image.FromStream(mstream);
+                            pictureBox1.Image = img;
+                        }
+                        catch (Exception)
+                        {
+                            pictureBox1.Image = null;
+                        }
+
                         noteshow = noteshow + "\n" + i.note;
-                        //noteshow = noteshow + "\n\n\n";
                     }
                     notetextbox.Text = noteshow;
+                    
                     db.closeConnection();
 
                     if(Program.emo == "Happy")
@@ -136,8 +142,27 @@ namespace final
             }
 
         }
-
-        private void editbtn_Click(object sender, EventArgs e)
+        private void showpicture1()
+        {
+            if (Program.picturetoclass == null)
+            {
+                pictureBox1.Image = null;
+            }
+            else
+            {
+                try
+                {
+                    MemoryStream mstream = new MemoryStream(Program.picturetoclass);
+                    Image img = Image.FromStream(mstream);
+                    pictureBox1.Image = img;
+                }
+                catch (Exception)
+                {
+                    pictureBox1.Image = null;
+                }
+            }
+        }
+            private void editbtn_Click(object sender, EventArgs e)
         {
             if (happybtn.Checked == false && excitedbtn.Checked == false && sadbtn.Checked == false && angrybtn.Checked == false && boredbtn.Checked == false && calmbtn.Checked == false)
             {
@@ -166,13 +191,20 @@ namespace final
 
                 if (table.Rows.Count > 0)
                 {
-                    db.openConnection();
-                    MySqlCommand command = new MySqlCommand($"UPDATE `dairy` SET `emo`=\"{emo}\",`note`=\"{note}\" WHERE `user` = \"{Program.username}\" AND `day` = \"{dy}\" AND `month` = \"{mn}\" AND `year` = \"{yr}\"", db.GetConnection());
+                    MemoryStream ms = new MemoryStream();
+                    pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
+                    byte[] img = ms.ToArray();
 
+                    db.openConnection();
+                    MySqlCommand command = new MySqlCommand($"UPDATE `dairy` SET `emo`=\"{emo}\",`note`=\"{note}\" , image = @img WHERE `user` = \"{Program.username}\" AND `day` = \"{dy}\" AND `month` = \"{mn}\" AND `year` = \"{yr}\"", db.GetConnection());
+                    command.Parameters.Add("@img", MySqlDbType.LongBlob);
+                    command.Parameters["@img"].Value = img;
+                    //command.ExecuteNonQuery();
                     adapter.SelectCommand = command;
                     adapter.Fill(table);
                     MessageBox.Show("Edit dairy successfull!");
                     db.closeConnection();
+
                 }
                 else
                 {
@@ -214,6 +246,16 @@ namespace final
         private void edit_Load(object sender, EventArgs e)
         {
             this.guna2DateTimePicker1.Value = DateTime.Now;
+        }
+
+        private void browsebtn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opf = new OpenFileDialog();
+            opf.Filter = "png files(*png)|*.png|jpg files(*.jpg)|*.jpg";
+            if (opf.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image = Image.FromFile(opf.FileName);
+            }
         }
     }
 }

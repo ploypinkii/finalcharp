@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace final
 {
-    class readdairy
+    class Class
     {
-        public string emo { get; set; }
         public string day { get; set; }
         public string month { get; set; }
         public string year { get; set; }
         public string note { get; set; }
-        public byte[] picturedairy { get; set; }
+        public string emo { get; set; }
 
+        public byte picturetoclass { get; set; }
     }
 }

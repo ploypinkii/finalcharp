@@ -48,6 +48,8 @@ namespace final
             this.happybtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.delpicturebox = new Guna.UI2.WinForms.Guna2PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.delpicturebox)).BeginInit();
             this.SuspendLayout();
             // 
             // searchbtn
@@ -111,7 +113,7 @@ namespace final
             this.notetextbox.PlaceholderText = "";
             this.notetextbox.SelectedText = "";
             this.notetextbox.ShadowDecoration.Parent = this.notetextbox;
-            this.notetextbox.Size = new System.Drawing.Size(569, 128);
+            this.notetextbox.Size = new System.Drawing.Size(268, 128);
             this.notetextbox.TabIndex = 55;
             // 
             // label10
@@ -119,9 +121,9 @@ namespace final
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("LEMON MILK", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.label10.Location = new System.Drawing.Point(271, 60);
+            this.label10.Location = new System.Drawing.Point(114, 68);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(94, 24);
+            this.label10.Size = new System.Drawing.Size(77, 20);
             this.label10.TabIndex = 54;
             this.label10.Text = "My Diary";
             // 
@@ -131,7 +133,7 @@ namespace final
             this.label9.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(394, 285);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 20);
+            this.label9.Size = new System.Drawing.Size(35, 15);
             this.label9.TabIndex = 53;
             this.label9.Text = "Calm";
             // 
@@ -141,7 +143,7 @@ namespace final
             this.label8.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(316, 285);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 20);
+            this.label8.Size = new System.Drawing.Size(38, 15);
             this.label8.TabIndex = 52;
             this.label8.Text = "Bored";
             // 
@@ -151,7 +153,7 @@ namespace final
             this.label7.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(245, 285);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 20);
+            this.label7.Size = new System.Drawing.Size(39, 15);
             this.label7.TabIndex = 51;
             this.label7.Text = "Angry";
             // 
@@ -161,7 +163,7 @@ namespace final
             this.label6.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(177, 285);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 20);
+            this.label6.Size = new System.Drawing.Size(27, 15);
             this.label6.TabIndex = 50;
             this.label6.Text = "Sad";
             // 
@@ -171,7 +173,7 @@ namespace final
             this.label5.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(91, 285);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 20);
+            this.label5.Size = new System.Drawing.Size(45, 15);
             this.label5.TabIndex = 49;
             this.label5.Text = "Excited";
             // 
@@ -181,7 +183,7 @@ namespace final
             this.label4.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(21, 285);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 20);
+            this.label4.Size = new System.Drawing.Size(42, 15);
             this.label4.TabIndex = 48;
             this.label4.Text = "Happy";
             // 
@@ -324,7 +326,7 @@ namespace final
             this.label2.ForeColor = System.Drawing.Color.LightSlateGray;
             this.label2.Location = new System.Drawing.Point(87, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 24);
+            this.label2.Size = new System.Drawing.Size(140, 20);
             this.label2.TabIndex = 41;
             this.label2.Text = "Choose this day!";
             // 
@@ -349,11 +351,23 @@ namespace final
             this.guna2DateTimePicker1.UseTransparentBackground = true;
             this.guna2DateTimePicker1.Value = new System.DateTime(2021, 5, 25, 0, 0, 0, 0);
             // 
+            // delpicturebox
+            // 
+            this.delpicturebox.BackColor = System.Drawing.Color.Transparent;
+            this.delpicturebox.Location = new System.Drawing.Point(360, 92);
+            this.delpicturebox.Name = "delpicturebox";
+            this.delpicturebox.ShadowDecoration.Parent = this.delpicturebox;
+            this.delpicturebox.Size = new System.Drawing.Size(214, 127);
+            this.delpicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.delpicturebox.TabIndex = 58;
+            this.delpicturebox.TabStop = false;
+            // 
             // delete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
+            this.Controls.Add(this.delpicturebox);
             this.Controls.Add(this.searchbtn);
             this.Controls.Add(this.deletebtn);
             this.Controls.Add(this.notetextbox);
@@ -375,6 +389,7 @@ namespace final
             this.Name = "delete";
             this.Size = new System.Drawing.Size(611, 319);
             this.Load += new System.EventHandler(this.delete_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.delpicturebox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -400,5 +415,6 @@ namespace final
         private Guna.UI2.WinForms.Guna2CircleButton happybtn;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2PictureBox delpicturebox;
     }
 }

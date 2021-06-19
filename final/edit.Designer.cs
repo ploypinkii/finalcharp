@@ -49,6 +49,9 @@ namespace final
             this.label2 = new System.Windows.Forms.Label();
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.searchbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.browsebtn = new Guna.UI2.WinForms.Guna2Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // editbtn
@@ -62,10 +65,11 @@ namespace final
             this.editbtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.editbtn.ForeColor = System.Drawing.Color.White;
             this.editbtn.HoverState.Parent = this.editbtn;
-            this.editbtn.Location = new System.Drawing.Point(490, 253);
+            this.editbtn.Location = new System.Drawing.Point(491, 254);
+            this.editbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.editbtn.Name = "editbtn";
             this.editbtn.ShadowDecoration.Parent = this.editbtn;
-            this.editbtn.Size = new System.Drawing.Size(106, 32);
+            this.editbtn.Size = new System.Drawing.Size(107, 32);
             this.editbtn.TabIndex = 38;
             this.editbtn.Text = "Edit dairy";
             this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
@@ -86,6 +90,7 @@ namespace final
             this.notetextbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.notetextbox.HoverState.Parent = this.notetextbox;
             this.notetextbox.Location = new System.Drawing.Point(27, 87);
+            this.notetextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.notetextbox.Multiline = true;
             this.notetextbox.Name = "notetextbox";
             this.notetextbox.PasswordChar = '\0';
@@ -93,7 +98,7 @@ namespace final
             this.notetextbox.PlaceholderText = "";
             this.notetextbox.SelectedText = "";
             this.notetextbox.ShadowDecoration.Parent = this.notetextbox;
-            this.notetextbox.Size = new System.Drawing.Size(569, 128);
+            this.notetextbox.Size = new System.Drawing.Size(251, 128);
             this.notetextbox.TabIndex = 37;
             // 
             // label10
@@ -101,9 +106,9 @@ namespace final
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("LEMON MILK", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.label10.Location = new System.Drawing.Point(207, 56);
+            this.label10.Location = new System.Drawing.Point(39, 60);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(200, 24);
+            this.label10.Size = new System.Drawing.Size(163, 20);
             this.label10.TabIndex = 36;
             this.label10.Text = "how was your day ?";
             // 
@@ -113,7 +118,7 @@ namespace final
             this.label9.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(397, 281);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 20);
+            this.label9.Size = new System.Drawing.Size(35, 15);
             this.label9.TabIndex = 35;
             this.label9.Text = "Calm";
             // 
@@ -123,7 +128,7 @@ namespace final
             this.label8.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(319, 281);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 20);
+            this.label8.Size = new System.Drawing.Size(38, 15);
             this.label8.TabIndex = 34;
             this.label8.Text = "Bored";
             // 
@@ -133,7 +138,7 @@ namespace final
             this.label7.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(248, 281);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 20);
+            this.label7.Size = new System.Drawing.Size(39, 15);
             this.label7.TabIndex = 33;
             this.label7.Text = "Angry";
             // 
@@ -143,7 +148,7 @@ namespace final
             this.label6.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(180, 281);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 20);
+            this.label6.Size = new System.Drawing.Size(27, 15);
             this.label6.TabIndex = 32;
             this.label6.Text = "Sad";
             // 
@@ -151,9 +156,9 @@ namespace final
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(94, 281);
+            this.label5.Location = new System.Drawing.Point(93, 281);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 20);
+            this.label5.Size = new System.Drawing.Size(45, 15);
             this.label5.TabIndex = 31;
             this.label5.Text = "Excited";
             // 
@@ -163,7 +168,7 @@ namespace final
             this.label4.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(24, 281);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 20);
+            this.label4.Size = new System.Drawing.Size(42, 15);
             this.label4.TabIndex = 30;
             this.label4.Text = "Happy";
             // 
@@ -180,7 +185,8 @@ namespace final
             this.calmbtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.calmbtn.ForeColor = System.Drawing.Color.White;
             this.calmbtn.HoverState.Parent = this.calmbtn;
-            this.calmbtn.Location = new System.Drawing.Point(390, 232);
+            this.calmbtn.Location = new System.Drawing.Point(389, 231);
+            this.calmbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.calmbtn.Name = "calmbtn";
             this.calmbtn.PressedColor = System.Drawing.Color.White;
             this.calmbtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -202,7 +208,8 @@ namespace final
             this.boredbtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.boredbtn.ForeColor = System.Drawing.Color.White;
             this.boredbtn.HoverState.Parent = this.boredbtn;
-            this.boredbtn.Location = new System.Drawing.Point(313, 232);
+            this.boredbtn.Location = new System.Drawing.Point(313, 231);
+            this.boredbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.boredbtn.Name = "boredbtn";
             this.boredbtn.PressedColor = System.Drawing.Color.White;
             this.boredbtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -224,7 +231,8 @@ namespace final
             this.angrybtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.angrybtn.ForeColor = System.Drawing.Color.White;
             this.angrybtn.HoverState.Parent = this.angrybtn;
-            this.angrybtn.Location = new System.Drawing.Point(243, 232);
+            this.angrybtn.Location = new System.Drawing.Point(243, 231);
+            this.angrybtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.angrybtn.Name = "angrybtn";
             this.angrybtn.PressedColor = System.Drawing.Color.White;
             this.angrybtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -246,7 +254,8 @@ namespace final
             this.sadbtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.sadbtn.ForeColor = System.Drawing.Color.White;
             this.sadbtn.HoverState.Parent = this.sadbtn;
-            this.sadbtn.Location = new System.Drawing.Point(170, 232);
+            this.sadbtn.Location = new System.Drawing.Point(171, 231);
+            this.sadbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sadbtn.Name = "sadbtn";
             this.sadbtn.PressedColor = System.Drawing.Color.White;
             this.sadbtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -268,7 +277,8 @@ namespace final
             this.excitedbtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.excitedbtn.ForeColor = System.Drawing.Color.White;
             this.excitedbtn.HoverState.Parent = this.excitedbtn;
-            this.excitedbtn.Location = new System.Drawing.Point(94, 232);
+            this.excitedbtn.Location = new System.Drawing.Point(93, 231);
+            this.excitedbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.excitedbtn.Name = "excitedbtn";
             this.excitedbtn.PressedColor = System.Drawing.Color.White;
             this.excitedbtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -284,7 +294,7 @@ namespace final
             this.label3.ForeColor = System.Drawing.Color.LightSlateGray;
             this.label3.Location = new System.Drawing.Point(16, -18);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(222, 24);
+            this.label3.Size = new System.Drawing.Size(180, 20);
             this.label3.TabIndex = 24;
             this.label3.Text = "Choose your feeling!";
             // 
@@ -301,7 +311,8 @@ namespace final
             this.happybtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.happybtn.ForeColor = System.Drawing.Color.White;
             this.happybtn.HoverState.Parent = this.happybtn;
-            this.happybtn.Location = new System.Drawing.Point(21, 232);
+            this.happybtn.Location = new System.Drawing.Point(21, 231);
+            this.happybtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.happybtn.Name = "happybtn";
             this.happybtn.PressedColor = System.Drawing.Color.White;
             this.happybtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -315,9 +326,9 @@ namespace final
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("LEMON MILK", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.label2.Location = new System.Drawing.Point(90, 14);
+            this.label2.Location = new System.Drawing.Point(91, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 24);
+            this.label2.Size = new System.Drawing.Size(140, 20);
             this.label2.TabIndex = 22;
             this.label2.Text = "Choose this day!";
             // 
@@ -333,11 +344,12 @@ namespace final
             this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.guna2DateTimePicker1.HoverState.Parent = this.guna2DateTimePicker1;
             this.guna2DateTimePicker1.Location = new System.Drawing.Point(273, 14);
+            this.guna2DateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
             this.guna2DateTimePicker1.ShadowDecoration.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(150, 22);
+            this.guna2DateTimePicker1.Size = new System.Drawing.Size(149, 22);
             this.guna2DateTimePicker1.TabIndex = 21;
             this.guna2DateTimePicker1.UseTransparentBackground = true;
             this.guna2DateTimePicker1.Value = new System.DateTime(2021, 5, 25, 0, 0, 0, 0);
@@ -354,18 +366,51 @@ namespace final
             this.searchbtn.ForeColor = System.Drawing.Color.White;
             this.searchbtn.HoverState.Parent = this.searchbtn;
             this.searchbtn.Location = new System.Drawing.Point(436, 9);
+            this.searchbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchbtn.Name = "searchbtn";
             this.searchbtn.ShadowDecoration.Parent = this.searchbtn;
-            this.searchbtn.Size = new System.Drawing.Size(106, 32);
+            this.searchbtn.Size = new System.Drawing.Size(107, 32);
             this.searchbtn.TabIndex = 39;
             this.searchbtn.Text = "search";
             this.searchbtn.Click += new System.EventHandler(this.searchbtn_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(322, 71);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(272, 135);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 40;
+            this.pictureBox1.TabStop = false;
+            // 
+            // browsebtn
+            // 
+            this.browsebtn.Animated = true;
+            this.browsebtn.BackColor = System.Drawing.Color.Transparent;
+            this.browsebtn.BorderRadius = 7;
+            this.browsebtn.CheckedState.Parent = this.browsebtn;
+            this.browsebtn.CustomImages.Parent = this.browsebtn;
+            this.browsebtn.FillColor = System.Drawing.Color.LightPink;
+            this.browsebtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.browsebtn.ForeColor = System.Drawing.Color.White;
+            this.browsebtn.HoverState.Parent = this.browsebtn;
+            this.browsebtn.Location = new System.Drawing.Point(503, 213);
+            this.browsebtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.browsebtn.Name = "browsebtn";
+            this.browsebtn.ShadowDecoration.Parent = this.browsebtn;
+            this.browsebtn.Size = new System.Drawing.Size(92, 30);
+            this.browsebtn.TabIndex = 41;
+            this.browsebtn.Text = "browse";
+            this.browsebtn.Click += new System.EventHandler(this.browsebtn_Click);
             // 
             // edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
+            this.Controls.Add(this.browsebtn);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.searchbtn);
             this.Controls.Add(this.editbtn);
             this.Controls.Add(this.notetextbox);
@@ -385,9 +430,11 @@ namespace final
             this.Controls.Add(this.happybtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.guna2DateTimePicker1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "edit";
             this.Size = new System.Drawing.Size(611, 319);
             this.Load += new System.EventHandler(this.edit_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,5 +461,7 @@ namespace final
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
         private Guna.UI2.WinForms.Guna2Button searchbtn;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Button browsebtn;
     }
 }

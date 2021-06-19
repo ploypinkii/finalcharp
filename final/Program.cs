@@ -23,6 +23,7 @@ namespace final
         public static float countangry = 0;
         public static float countbored = 0;
         public static float countcalm = 0;
+        public static byte[] picturetoclass;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -33,5 +34,11 @@ namespace final
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new login());
         }
+        public static string premo;
+        public static string prday;
+        public static string prmonth;
+        public static string pryear;
+        public static string prnote;
+        public static byte prpicturetoclass;
     }
 }

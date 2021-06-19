@@ -17,7 +17,7 @@ namespace final
         {
             InitializeComponent();
         }
-        
+        //ปุ่ม all prewview
         private void mydairy_Load(object sender, EventArgs e)
         {
             mydairy2.Controls.Add(new showemo());
@@ -28,13 +28,13 @@ namespace final
             mydairy2.Controls.Clear();
             mydairy2.Controls.Add(new showemo());
         }
-
+        //ปุ่ม edit
         private void editbtn_Click(object sender, EventArgs e)
         {
             mydairy2.Controls.Clear();
             mydairy2.Controls.Add(new edit());
         }
-
+        //ปุ่ม delete
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             mydairy2.Controls.Clear();

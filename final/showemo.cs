@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.IO;
 
 namespace final
 {
@@ -21,16 +22,18 @@ namespace final
         private static float angryper;
         private static float boredper;
         private static float calmper;
+        int lenght;
+        int show;
+        int index = 0;
 
 
         public showemo()
         {
             InitializeComponent();
         }
-
         private void showemo_Load(object sender, EventArgs e)
         {
-
+            //ดึงข้อมูลจาก username ออกมาแสดง
             DB db = new DB();
             db.openConnection();
             string selectsql = $"SELECT * FROM `dairy` WHERE `user` = \"{Program.username}\"";
@@ -41,14 +44,17 @@ namespace final
                 db.openConnection();
                 using (MySqlDataReader read = cmd.ExecuteReader())
                 {
-                    string noteshow = "";
+                    lenght = 0;
                     while (read.Read())
                     {
+                        lenght = lenght + 1;
                         Program.emo = read.GetString("emo").ToString();
                         Program.day = read.GetString("day").ToString();
                         Program.month = read.GetString("month").ToString();
                         Program.year = read.GetString("year").ToString();
+                        Program.year = read.GetString("year").ToString();
                         Program.note = read.GetString("note").ToString();
+                        Program.picturetoclass = (byte[])(read["image"]);
 
                         readdairy item = new readdairy()
                         {
@@ -56,22 +62,11 @@ namespace final
                             day = Program.day,
                             month = Program.month,
                             year = Program.year,
-                            note = Program.note
+                            note = Program.note,
+                            picturedairy = Program.picturetoclass
                         };
-                        richTextBox1.SelectionAlignment = HorizontalAlignment.Center;
                         bookdairy.Add(item);
                     }
-
-                    foreach (var i in bookdairy)
-                    {
-                        noteshow = noteshow + "" + i.emo;
-                        noteshow = noteshow + "\n" + i.day;
-                        noteshow = noteshow + "/" + i.month;
-                        noteshow = noteshow + "/" + i.year;
-                        noteshow = noteshow + "\n" + i.note;
-                        noteshow = noteshow + "\n\n\n";
-                    }
-                    richTextBox1.Text = noteshow;
                     db.closeConnection();
                 }
                 db.openConnection();
@@ -191,8 +186,98 @@ namespace final
             {
                 db.closeConnection();
             }
+            show = lenght-1;
+            showpicture1();
+
+        }
+        private void showpicture1()
+        {
+            if (Program.picturetoclass == null)
+            {
+                pictureBox1.Image = null;
+            }
+            else
+            {
+                try
+                {
+                    MemoryStream mstream = new MemoryStream(Program.picturetoclass);
+                    Image img = Image.FromStream(mstream);
+                    pictureBox1.Image = img;
+                }
+                catch (Exception)
+                {
+                    pictureBox1.Image = null;
+                }
+            }
+            
+            foreach (var i in bookdairy)
+            {
+                date.Text = i.day + "/" + i.month + "/" + i.year;
+                emolabel.Text = i.emo;
+                richTextBox1.Text = i.note;
+            }
+            nextButton.Enabled = false;
         }
 
-       
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            //show = index leght = countlist
+            if (show >= lenght-1)
+            {
+                nextButton.Enabled = false;
+                backButton.Enabled = true;
+            }
+            else
+            {
+                show = show + 1;
+                showbutton();
+                backButton.Enabled = true;
+            }
+
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            if (show <= 0)
+            {
+                backButton.Enabled = false;
+                nextButton.Enabled = true;
+            }
+            else
+            {
+                show = show - 1;
+                showbutton();
+                nextButton.Enabled = true;
+            }
+        }
+
+        private void showbutton()
+        {
+            
+            //MessageBox.Show(show + " " + index);
+            index = 0;
+            foreach (var i in bookdairy)
+            {
+                //MessageBox.Show("in loop:"+show + " " + index);
+                if (show == index)
+                {
+                    try
+                    {
+                        MemoryStream mstream = new MemoryStream(i.picturedairy);
+                        Image img = Image.FromStream(mstream);
+                        pictureBox1.Image = img;
+                    }
+                    catch (Exception)
+                    {
+                        pictureBox1.Image = null;
+                    }
+                    date.Text = i.day + "/" + i.month + "/" + i.year;
+                    emolabel.Text = i.emo;
+                    richTextBox1.Text = i.note;
+                }
+                index = index + 1;
+            }
+            
+        }
     }
 }

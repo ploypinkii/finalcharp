@@ -22,7 +22,7 @@ namespace final
         {
             Application.Exit();
         }
-
+        //เช็ครหัสผ่านใหม่
         private void verifyotpbtn_Click(object sender, EventArgs e)
         {
             if (repeatnewpasswordtextbox.Text == "")

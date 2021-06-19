@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 namespace final
 {
@@ -34,7 +35,7 @@ namespace final
             login m = new login();
             m.Show();
         }
-
+        //ปุ่ม send OTP
         private void sendotpbtn_Click(object sender, EventArgs e)
         {
             if (emailtextbox.Text == "")
@@ -90,12 +91,8 @@ namespace final
                     label5.Text = "This e-mail doesn't use to register with our program";
                 }
             }
-            
-            
-
-            
         }
-
+        //ปุ่ม verify
         private void verifyotpbtn_Click(object sender, EventArgs e)
         {
             if (otptextbox.Text == "")
@@ -113,6 +110,20 @@ namespace final
             else
             {
                 MessageBox.Show("Invalid password please try again");
+            }
+        }
+
+        private void emailtextbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string pattern = (@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            if (Regex.IsMatch(emailtextbox.Text, pattern))
+            {
+                errorProvider1.Clear();
+            }
+            else
+            {
+                errorProvider1.SetError(this.emailtextbox, "E-mail are invalid");
+                return;
             }
         }
     }

@@ -37,10 +37,13 @@ namespace final
             this.showbtn = new Guna.UI2.WinForms.Guna2Button();
             this.usershow = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.changebtn = new Guna.UI2.WinForms.Guna2Button();
+            this.browsebtn = new Guna.UI2.WinForms.Guna2Button();
+            this.readbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Main = new Guna.UI2.WinForms.Guna2Button();
             this.logoutbtn = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.label14 = new System.Windows.Forms.Label();
             this.mainpanel = new System.Windows.Forms.Panel();
@@ -56,11 +59,12 @@ namespace final
             this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2CircleButton2.ForeColor = System.Drawing.Color.White;
             this.guna2CircleButton2.HoverState.Parent = this.guna2CircleButton2;
-            this.guna2CircleButton2.Location = new System.Drawing.Point(874, 12);
+            this.guna2CircleButton2.Location = new System.Drawing.Point(875, 12);
+            this.guna2CircleButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2CircleButton2.Name = "guna2CircleButton2";
             this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton2.ShadowDecoration.Parent = this.guna2CircleButton2;
-            this.guna2CircleButton2.Size = new System.Drawing.Size(20, 19);
+            this.guna2CircleButton2.Size = new System.Drawing.Size(20, 18);
             this.guna2CircleButton2.TabIndex = 21;
             this.guna2CircleButton2.Text = "guna2CircleButton2";
             this.guna2CircleButton2.Click += new System.EventHandler(this.guna2CircleButton2_Click);
@@ -79,11 +83,12 @@ namespace final
             this.addbtn.Font = new System.Drawing.Font("LEMON MILK", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addbtn.ForeColor = System.Drawing.Color.White;
             this.addbtn.HoverState.Parent = this.addbtn;
-            this.addbtn.Location = new System.Drawing.Point(-3, 317);
+            this.addbtn.Location = new System.Drawing.Point(-3, 299);
+            this.addbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addbtn.Name = "addbtn";
             this.addbtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.addbtn.ShadowDecoration.Parent = this.addbtn;
-            this.addbtn.Size = new System.Drawing.Size(240, 45);
+            this.addbtn.Size = new System.Drawing.Size(240, 46);
             this.addbtn.TabIndex = 23;
             this.addbtn.Text = "New Dairy";
             this.addbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -98,10 +103,11 @@ namespace final
             this.showbtn.Font = new System.Drawing.Font("LEMON MILK", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showbtn.ForeColor = System.Drawing.Color.White;
             this.showbtn.HoverState.Parent = this.showbtn;
-            this.showbtn.Location = new System.Drawing.Point(0, 368);
+            this.showbtn.Location = new System.Drawing.Point(0, 349);
+            this.showbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.showbtn.Name = "showbtn";
             this.showbtn.ShadowDecoration.Parent = this.showbtn;
-            this.showbtn.Size = new System.Drawing.Size(237, 45);
+            this.showbtn.Size = new System.Drawing.Size(237, 46);
             this.showbtn.TabIndex = 24;
             this.showbtn.Text = "My Dairy";
             this.showbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -113,7 +119,7 @@ namespace final
             this.usershow.BackColor = System.Drawing.Color.Thistle;
             this.usershow.Font = new System.Drawing.Font("LEMON MILK", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usershow.ForeColor = System.Drawing.Color.White;
-            this.usershow.Location = new System.Drawing.Point(11, 208);
+            this.usershow.Location = new System.Drawing.Point(6, 206);
             this.usershow.Name = "usershow";
             this.usershow.Size = new System.Drawing.Size(137, 29);
             this.usershow.TabIndex = 25;
@@ -121,20 +127,96 @@ namespace final
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.browsebtn);
+            this.guna2Panel1.Controls.Add(this.changebtn);
+            this.guna2Panel1.Controls.Add(this.readbtn);
+            this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Controls.Add(this.Main);
             this.guna2Panel1.Controls.Add(this.logoutbtn);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.addbtn);
             this.guna2Panel1.Controls.Add(this.usershow);
             this.guna2Panel1.Controls.Add(this.showbtn);
-            this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.FillColor = System.Drawing.Color.Thistle;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(231, 515);
+            this.guna2Panel1.Size = new System.Drawing.Size(231, 514);
             this.guna2Panel1.TabIndex = 26;
+            // 
+            // changebtn
+            // 
+            this.changebtn.Animated = true;
+            this.changebtn.AutoRoundedCorners = true;
+            this.changebtn.BackColor = System.Drawing.Color.Transparent;
+            this.changebtn.BorderRadius = 12;
+            this.changebtn.CheckedState.Parent = this.changebtn;
+            this.changebtn.CustomImages.Parent = this.changebtn;
+            this.changebtn.FillColor = System.Drawing.Color.LightSteelBlue;
+            this.changebtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.changebtn.ForeColor = System.Drawing.Color.White;
+            this.changebtn.HoverState.Parent = this.changebtn;
+            this.changebtn.Location = new System.Drawing.Point(18, 135);
+            this.changebtn.Name = "changebtn";
+            this.changebtn.ShadowDecoration.Parent = this.changebtn;
+            this.changebtn.Size = new System.Drawing.Size(196, 27);
+            this.changebtn.TabIndex = 48;
+            this.changebtn.Text = "confirm to change";
+            this.changebtn.Click += new System.EventHandler(this.changebtn_Click);
+            // 
+            // browsebtn
+            // 
+            this.browsebtn.Animated = true;
+            this.browsebtn.AutoRoundedCorners = true;
+            this.browsebtn.BackColor = System.Drawing.Color.Transparent;
+            this.browsebtn.BorderRadius = 12;
+            this.browsebtn.CheckedState.Parent = this.browsebtn;
+            this.browsebtn.CustomImages.Parent = this.browsebtn;
+            this.browsebtn.FillColor = System.Drawing.Color.Pink;
+            this.browsebtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.browsebtn.ForeColor = System.Drawing.Color.Black;
+            this.browsebtn.HoverState.Parent = this.browsebtn;
+            this.browsebtn.Location = new System.Drawing.Point(18, 135);
+            this.browsebtn.Name = "browsebtn";
+            this.browsebtn.ShadowDecoration.Parent = this.browsebtn;
+            this.browsebtn.Size = new System.Drawing.Size(196, 27);
+            this.browsebtn.TabIndex = 47;
+            this.browsebtn.Text = "change picture";
+            this.browsebtn.Click += new System.EventHandler(this.browsebtn_Click);
+            // 
+            // readbtn
+            // 
+            this.readbtn.Animated = true;
+            this.readbtn.CheckedState.Parent = this.readbtn;
+            this.readbtn.CustomImages.Parent = this.readbtn;
+            this.readbtn.FillColor = System.Drawing.Color.Thistle;
+            this.readbtn.Font = new System.Drawing.Font("LEMON MILK", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.readbtn.ForeColor = System.Drawing.Color.White;
+            this.readbtn.HoverState.Parent = this.readbtn;
+            this.readbtn.Location = new System.Drawing.Point(-3, 399);
+            this.readbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.readbtn.Name = "readbtn";
+            this.readbtn.ShadowDecoration.Parent = this.readbtn;
+            this.readbtn.Size = new System.Drawing.Size(237, 46);
+            this.readbtn.TabIndex = 31;
+            this.readbtn.Text = "read dairy";
+            this.readbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.readbtn.Click += new System.EventHandler(this.readbtn_Click);
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(49, 17);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(131, 105);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 27;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // Main
             // 
@@ -145,11 +227,12 @@ namespace final
             this.Main.Font = new System.Drawing.Font("LEMON MILK", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Main.ForeColor = System.Drawing.Color.White;
             this.Main.HoverState.Parent = this.Main;
-            this.Main.Location = new System.Drawing.Point(0, 266);
+            this.Main.Location = new System.Drawing.Point(0, 247);
+            this.Main.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Main.Name = "Main";
             this.Main.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Main.ShadowDecoration.Parent = this.Main;
-            this.Main.Size = new System.Drawing.Size(231, 45);
+            this.Main.Size = new System.Drawing.Size(231, 46);
             this.Main.TabIndex = 30;
             this.Main.Text = "Main";
             this.Main.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -165,10 +248,11 @@ namespace final
             this.logoutbtn.Font = new System.Drawing.Font("LEMON MILK", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutbtn.ForeColor = System.Drawing.Color.White;
             this.logoutbtn.HoverState.Parent = this.logoutbtn;
-            this.logoutbtn.Location = new System.Drawing.Point(3, 467);
+            this.logoutbtn.Location = new System.Drawing.Point(3, 466);
+            this.logoutbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logoutbtn.Name = "logoutbtn";
             this.logoutbtn.ShadowDecoration.Parent = this.logoutbtn;
-            this.logoutbtn.Size = new System.Drawing.Size(228, 45);
+            this.logoutbtn.Size = new System.Drawing.Size(228, 46);
             this.logoutbtn.TabIndex = 29;
             this.logoutbtn.Text = "Logout";
             this.logoutbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -180,23 +264,11 @@ namespace final
             this.label1.BackColor = System.Drawing.Color.Thistle;
             this.label1.Font = new System.Drawing.Font("LEMON MILK", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 179);
+            this.label1.Location = new System.Drawing.Point(7, 176);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 29);
             this.label1.TabIndex = 28;
             this.label1.Text = "HELLO!";
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Thistle;
-            this.guna2PictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.BackgroundImage")));
-            this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(3, 12);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(212, 164);
-            this.guna2PictureBox1.TabIndex = 27;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // guna2BorderlessForm1
             // 
@@ -217,6 +289,7 @@ namespace final
             // mainpanel
             // 
             this.mainpanel.Location = new System.Drawing.Point(237, 49);
+            this.mainpanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mainpanel.Name = "mainpanel";
             this.mainpanel.Size = new System.Drawing.Size(669, 463);
             this.mainpanel.TabIndex = 46;
@@ -226,13 +299,14 @@ namespace final
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
-            this.ClientSize = new System.Drawing.Size(906, 515);
+            this.ClientSize = new System.Drawing.Size(907, 514);
             this.Controls.Add(this.mainpanel);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2CircleButton2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Mainprogram";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mainprogram";
@@ -260,5 +334,8 @@ namespace final
         private System.Windows.Forms.Label label14;
         private Guna.UI2.WinForms.Guna2Button Main;
         private System.Windows.Forms.Panel mainpanel;
+        private Guna.UI2.WinForms.Guna2Button readbtn;
+        private Guna.UI2.WinForms.Guna2Button changebtn;
+        private Guna.UI2.WinForms.Guna2Button browsebtn;
     }
 }

@@ -19,11 +19,12 @@ namespace final
             InitializeComponent();
         }
 
+        //ปุ่มปิดโปรแกรม
         private void exitbtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        //ปุ่ม show password
         private void showcheck_CheckedChanged(object sender, EventArgs e)
         {
             if (showcheck.Checked)
@@ -37,6 +38,7 @@ namespace final
             }
         }
 
+        //ปุ่ม sign in
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
@@ -44,6 +46,7 @@ namespace final
             m.Show();
         }
 
+        //ปุ่มเข้าสู่ระบบ
         private void loginbtn_Click(object sender, EventArgs e)
         {
             DB db = new DB();
@@ -73,6 +76,7 @@ namespace final
             }
         }
 
+        //กด login โดยการกด enter
         private void passwordbox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -81,16 +85,36 @@ namespace final
             }
         }
 
-        private void login_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        //ปุ่มลืมรหัสผ่าน
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
             Forgot1 m = new Forgot1();
             m.Show();
+        }
+
+        private void usernamebox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (System.Text.Encoding.UTF8.GetByteCount(new char[] { e.KeyChar }) > 1)
+            {
+                e.Handled = true;
+            }
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void passwordbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (System.Text.Encoding.UTF8.GetByteCount(new char[] { e.KeyChar }) > 1)
+            {
+                e.Handled = true;
+            }
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
